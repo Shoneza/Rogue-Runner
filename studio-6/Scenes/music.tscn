@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbppidok5qvle"]
+
+[ext_resource type="AudioStream" uid="uid://bofdcn2aakvfr" path="res://Assets/Sound/[Dummy Grim] Soul Knight OST ｜ Snow theme (perfect loop).mp3" id="1_7b13u"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_7b13u")
+autoplay = true
+bus = &"Music"

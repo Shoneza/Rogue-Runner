@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cin05cp5ljvsv"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_40apd"]
+[ext_resource type="PackedScene" uid="uid://brtjhrpxhu6ex" path="res://Scenes/bg.tscn" id="1_fipyy"]
+[ext_resource type="PackedScene" uid="uid://dve1buef4fmky" path="res://Scenes/ground.tscn" id="2_gih2n"]
+[ext_resource type="PackedScene" uid="uid://ciprwxlx06das" path="res://Scenes/rogue.tscn" id="3_lmnmv"]
+[ext_resource type="PackedScene" uid="uid://dhimshpve01un" path="res://Scenes/hud.tscn" id="5_nmjsw"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_40apd")
+
+[node name="Bg" parent="." instance=ExtResource("1_fipyy")]
+visible = false
+scale = Vector2(4, 4)
+transform = Transform2D(4, 0, 0, 4, 0, 0)
+
+[node name="Ground" parent="." instance=ExtResource("2_gih2n")]
+
+[node name="Rogue" parent="." instance=ExtResource("3_lmnmv")]
+position = Vector2(189, 487)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+position_smoothing_enabled = true
+
+[node name="HUD" parent="." instance=ExtResource("5_nmjsw")]
